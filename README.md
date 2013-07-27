@@ -41,7 +41,9 @@ devra etre comme suivant:
 
 
 
+
 class MyExport(base_csv_export.BaseExport):
+
     def __init__(self):
         base_csv_export.BaseExport.__init__(self)
 
@@ -68,7 +70,9 @@ la fonction `target` pourrait par exemple ressembler a ca .
 
 
  def target(lock =None , *args):
+
     from datetime import date
+
     while True :
         dt =datetime.now()
         if not dt.hour in (5, 6, 7, 4):
@@ -89,7 +93,7 @@ rien de plus simple, juste ouvir le module  ```job_thread_runner.py ``
 qui contient une pile d'execution des differents modules et ajouter votre 
 ``target`` .par exemple pour ajouter la classe permettant d'exporter
 des ``Fiches cloturees`` que vous avez cree dans un fichier appele 
-``fiches_clotures.py``  ajouter ces lignes dans ```job_thread_runner.py ``
+``fiches_clotures.py``  ajouter ces lignes dans ```job_thread_runner.py ``.
 
 
 
