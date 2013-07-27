@@ -45,12 +45,15 @@ devra etre comme suivant:
 class MyExport(base_csv_export.BaseExport):
 
     def __init__(self):
+
         base_csv_export.BaseExport.__init__(self)
 
     def chech_export(self):
+
          pass
 
     def blabla(self):
+
         pass
 
     def va_exporter(self):
@@ -74,15 +77,21 @@ la fonction `target` pourrait par exemple ressembler a ca .
     from datetime import date
 
     while True :
+
         dt =datetime.now()
+
         if not dt.hour in (5, 6, 7, 4):
+
             time.sleep(60)
+
             continue
         try:
             my= MyExport()
+
             my.va_exporter(config.CONFIG_EXPORT_MyExport)
                     
         except Exception, e:
+
             time.sleep(3600)
 
 
@@ -98,9 +107,13 @@ des ``Fiches cloturees`` que vous avez cree dans un fichier appele
 
 
 from  bin_ipvox.export.fiches_clotures import target \
+
       as  fiches_clotures_target
+
 targets =[
-       (fiches_clotures, fiches_clotures.__name__)]
+
+       (fiches_clotures, fiches_clotures.__name__)
+]
 
 
 - Enfin arreter l'execution de ```job_thread_runner.py `` avec Ctrl + x
