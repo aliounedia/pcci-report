@@ -16,8 +16,8 @@ class BaseExport(object):
         The query are read from a File and the file
         contain sql lines separated by #
         """
-        self.db = MySQLdb.connect("10.2.3.2", "ipvoxdb2",
-                         "ipvoxdb2", "canal")
+        self.db = MySQLdb.connect("xxx", "xxx",
+                         "xxx", "xxx")
         sqls    = query.split("$")
         for s in sqls:
             try:
@@ -33,8 +33,8 @@ class BaseExport(object):
         """
         Execute a single query 
         """
-        self.db = MySQLdb.connect("10.2.3.2", "ipvoxdb2",
-                         "ipvoxdb2", "canal")
+        self.db = MySQLdb.connect("xxx", "xxx",
+                         "xxx", "xxx")
         cursor  = self.db.cursor()
         lines   = cursor.execute(query)   
         self.data  = cursor.fetchall()
@@ -47,8 +47,8 @@ class BaseExport(object):
         The query are read from a File and the file
         contain many request separed by  $
         """
-        self.db = MySQLdb.connect("10.2.3.2", "ipvoxdb2",
-                         "ipvoxdb2", "ipvox_outband")
+        self.db = MySQLdb.connect("xxx", "xxx",
+                         "xxx", "xxx")
         sqls    = out.split("$")
         for s in sqls:
             try:
@@ -64,8 +64,8 @@ class BaseExport(object):
         """
         Execute a single query  from canal database
         """
-        self.db = MySQLdb.connect("10.2.3.2", "ipvoxdb2",
-                         "ipvoxdb2", "ipvox_outband")
+        self.db = MySQLdb.connect("xxx", "xxx",
+                         "xxx", "xxx")
         cursor  = self.db.cursor()
         lines   = cursor.execute(query)   
         self.data  = cursor.fetchall()
